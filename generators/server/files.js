@@ -681,14 +681,12 @@ function writeFiles() {
           'com.kjetland',
           'mbknor-jackson-jsonschema_2.12',
           MBKNOR_JACKSON_JSONSCHEMA_VERSION,
-          `
-            <exclusions>
-                <exclusion>
-                    <groupId>org.scala-lang</groupId>
-                    <artifactId>scala-library</artifactId>
-                </exclusion>
-            </exclusions>
-            `,
+          '            <exclusions>\n' +
+            '                <exclusion>\n' +
+            '                    <groupId>org.scala-lang</groupId>\n' +
+            '                    <artifactId>scala-library</artifactId>\n' +
+            '                </exclusion>\n' +
+            '            </exclusions>',
         );
       } else if (this.buildTool === 'gradle') {
         this.addGradleDependency('implementation', 'org.scala-lang', 'scala-library', SCALA_LIBRARY_VERSION);

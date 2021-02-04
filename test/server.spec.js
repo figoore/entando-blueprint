@@ -96,22 +96,20 @@ describe('Subgenerator server of entando JHipster blueprint', () => {
       );
     });
 
-    it('pom.xml contains the mbknor-jackson-jsonschema dependecy', () => {
+    it('pom.xml contains the mbknor-jackson-jsonschema dependency', () => {
       assert.fileContent(
         'pom.xml',
         '        <dependency>\n' +
           '            <groupId>com.kjetland</groupId>\n' +
           '            <artifactId>mbknor-jackson-jsonschema_2.12</artifactId>\n' +
           '            <version>1.0.34</version>\n' +
-          '\n' +
-          '          <exclusions>\n' +
-          '              <exclusion>\n' +
-          '                  <groupId>org.scala-lang</groupId>\n' +
-          '                  <artifactId>scala-library</artifactId>\n' +
-          '              </exclusion>\n' +
-          '          </exclusions>\n' +
-          '          \n' +
-          '        </dependency>\n',
+          '            <exclusions>\n' +
+          '                <exclusion>\n' +
+          '                    <groupId>org.scala-lang</groupId>\n' +
+          '                    <artifactId>scala-library</artifactId>\n' +
+          '                </exclusion>\n' +
+          '            </exclusions>\n' +
+          '        </dependency>',
       );
     });
 
